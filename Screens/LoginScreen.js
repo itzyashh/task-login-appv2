@@ -87,6 +87,7 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.mainBlock}>
+      <View style={styles.blueBlock}></View>
       <Text style={styles.textTitle} >Welcome!</Text>
 
       <Text style={styles.textNormal} >Email</Text>
@@ -115,28 +116,26 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter_400Regular',
     backgroundColor: 'white',
     // paddingVertical:165,
-    height: "100%"
+    height: "100%",
+    borderTopLeftRadius: 500
   },
   textTitle: {
-    marginTop: "30%",
+    marginTop: "20%",
     fontSize: 40,
     fontFamily: 'Inter_700Bold',
-    textAlign: 'center'
-  },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
+    textAlign: 'center',
   },
   textNormal: {
     marginHorizontal: 40,
     marginTop: 40,
     color: 'gray',
     fontFamily: 'Inter_400Regular'
+  },
+  blueBlock: {
+    backgroundColor:'#4563e4',
+    paddingBottom :'30%',
+    borderBottomLeftRadius:50,
+    borderBottomRightRadius:50
   }
 })
 
