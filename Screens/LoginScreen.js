@@ -22,7 +22,6 @@ const LoginScreen = () => {
   const [userEmail, setUserEmail] = useState('')
   const [password, setPassword] = useState("")
   const submit = () => {
-
     axios({
       method: 'POST',
       url: 'https://reqres.in/api/login',
