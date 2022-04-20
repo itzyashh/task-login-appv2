@@ -26,7 +26,7 @@ const LoginScreen = () => {
       method: 'POST',
       url: 'https://reqres.in/api/login',
       data: {
-        email: userEmail,
+        email: userEmail.trim(),
         password: password
       },
       headers: {
