@@ -10,7 +10,7 @@ const DashBoardScreen = () => {
   return (
       <>
     <View style={styles.blueBlock}>
-      <Text style={styles.textTitle}>DashBoardScreen</Text>
+      <Text style={styles.textTitle}>DashBoard Screen</Text>
     </View>
     <View style={styles.mainBlock}>
       <FlatButton text={'Back'} onPress={() =>navigation.navigate('Login')}/>
