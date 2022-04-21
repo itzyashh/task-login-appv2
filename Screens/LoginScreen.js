@@ -1,4 +1,4 @@
-import { Button, View, Text, TextInput, Alert, StyleSheet } from 'react-native'
+import { View, Text, TextInput, Alert, StyleSheet } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import tw from 'twrnc';
@@ -86,18 +86,20 @@ const LoginScreen = () => {
   // const [isShowingText, setIsShowingText] = useState(true);
 
   return (
-    <View style={styles.mainBlock}>
+  <>
       <View style={styles.blueBlock}></View>
+    <View style={styles.mainBlock}>
+      
       <Text style={styles.textTitle} >Welcome!</Text>
 
       <Text style={styles.textNormal} >Email</Text>
-      <TextInput style={tw`mt-1 mx-7 -mb-7 p-4 rounded-lg  bg-gray-100 text-gray-600 `} placeholder='Enter Email' autoCapitalize='none' value={userEmail}
+      <TextInput style={tw`mt-1 mx-5 -mb-7 p-4 rounded-lg  bg-gray-100 text-gray-600 `} placeholder='Enter Email' autoCapitalize='none' value={userEmail}
         onChangeText={(actualData) => setUserEmail(actualData)}
 
       ></TextInput>
 
       <Text style={styles.textNormal}>Password</Text>
-      <TextInput style={tw`mb-2 mt-1 mx-7  p-4 rounded-lg  bg-gray-100 text-gray-600`} placeholder='Enter Password' secureTextEntry={true}
+      <TextInput style={tw`mb-2 mt-1 mx-5  p-4 rounded-lg  bg-gray-100 text-gray-600`} placeholder='Enter Password' secureTextEntry={true}
         value={password}
         onChangeText={(actualData) => setPassword(actualData)}
       ></TextInput>
@@ -105,19 +107,23 @@ const LoginScreen = () => {
       <FlatButton text="Login" onPress={() => { submit() }} />
 
     </View>
+  </>
   )
 }
 const styles = StyleSheet.create({
   text: {
     fontSize: 40,
-    fontFamily: 'Inter_400Regular'
+    fontFamily: 'Inter_400Regular',
+    backgroundColor:'red',
   },
   mainBlock: {
     fontFamily: 'Inter_400Regular',
     backgroundColor: 'white',
     // paddingVertical:165,
     height: "100%",
-    borderTopLeftRadius: 500
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10
+    // marginTop:45
   },
   textTitle: {
     marginTop: "20%",
@@ -126,7 +132,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   textNormal: {
-    marginHorizontal: 40,
+    marginHorizontal: 30,
     marginTop: 40,
     color: 'gray',
     fontFamily: 'Inter_400Regular'
@@ -134,8 +140,11 @@ const styles = StyleSheet.create({
   blueBlock: {
     backgroundColor:'#4563e4',
     paddingBottom :'30%',
-    borderBottomLeftRadius:50,
-    borderBottomRightRadius:50
+    paddingTop:0,
+    position:'relative',
+       top:20
+    // marginTop:30
+    
   }
 })
 

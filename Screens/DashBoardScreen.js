@@ -8,10 +8,16 @@ const DashBoardScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View>
+      <>
+    <View style={styles.blueBlock}>
       <Text style={styles.textTitle}>DashBoardScreen</Text>
+    </View>
+    <View style={styles.mainBlock}>
+      <Text style={styles.textInfo}>Balance</Text>
       <FlatButton text={'Back'} onPress={() =>navigation.navigate('Login')}/>
     </View>
+
+    </>
   )
 }
 
@@ -22,7 +28,25 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter_700Bold',
     textAlign: 'center'
   },
-  btn: {paddingTop:50}
+  blueBlock: {
+    backgroundColor:'#4563e4',
+    paddingBottom :40,
+    marginTop:-20,
+    position:'relative',
+       top:20
+    // marginTop:30
+    
+  },
+  btn: {paddingTop:50},
+  mainBlock: {
+    fontFamily: 'Inter_400Regular',
+    backgroundColor: 'white',
+    // paddingVertical:165,
+    height: "100%",
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10
+    // marginTop:45
+  }
 })
 
 export default DashBoardScreen
