@@ -14,10 +14,10 @@ export default function FlatButton({ text, onPress }) {
 const styles = StyleSheet.create({
   button: {
     marginTop:10,
-    marginHorizontal:28,
+    marginHorizontal:20,
     borderRadius: 50,
     paddingVertical: 18,
-    paddingHorizontal: 80,
+    paddingHorizontal: 0,
     backgroundColor: '#2962ff',
   },
   buttonText: {

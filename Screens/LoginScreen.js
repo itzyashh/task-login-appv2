@@ -141,9 +141,11 @@ const styles = StyleSheet.create({
     backgroundColor:'#4563e4',
     paddingBottom :'30%',
     paddingTop:0,
+    
     position:'relative',
-       top:20
-    // marginTop:30
+    
+       top:20,
+    marginTop:-20
     
   }
 })
