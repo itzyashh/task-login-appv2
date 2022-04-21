@@ -13,7 +13,6 @@ const DashBoardScreen = () => {
       <Text style={styles.textTitle}>DashBoardScreen</Text>
     </View>
     <View style={styles.mainBlock}>
-      <Text style={styles.textInfo}>Balance</Text>
       <FlatButton text={'Back'} onPress={() =>navigation.navigate('Login')}/>
     </View>
 
@@ -37,12 +36,12 @@ const styles = StyleSheet.create({
     // marginTop:30
     
   },
-  btn: {paddingTop:50},
   mainBlock: {
     fontFamily: 'Inter_400Regular',
     backgroundColor: 'white',
     // paddingVertical:165,
     height: "100%",
+    
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10
     // marginTop:45
